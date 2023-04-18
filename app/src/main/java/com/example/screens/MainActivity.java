@@ -29,6 +29,7 @@ public class MainActivity extends AppCompatActivity {
     private void  switchActivities(){
 
         Intent switchActivityIntent = new Intent(MainActivity.this, SecondActivity.class);
+        switchActivityIntent.putExtra("number", "1" );
         startActivity(switchActivityIntent);
 
     }
