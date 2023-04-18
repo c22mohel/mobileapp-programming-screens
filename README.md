@@ -3,8 +3,13 @@
 
 **Skriv din rapport här!**
 
-_Du kan ta bort all text som finns sedan tidigare_.
-
+Det första jag gjorde var att lägga till en ny activity som heter secondActivity. i MainActivity så skapade jag en knapp. sedan så skapade jag en variable och länkade den till knappen med knappens id.
+Efter detta så la jag en onclick för att lyssna på knappen. sedan sås kapade jag en funktion som heter switchActivities. den ska ropas när knappen trycks.
+sedan så skapade jag en ny intent med denna kod i switchActivities funktionen. Intent switchActivityIntent = new Intent(MainActivity.this, SecondActivity.class); skapar ny intent.
+för ATT ropa och starta den intent så används denna kod startActivity(switchActivityIntent);. i den intent så skickas även med ett extra värde med denna kod switchActivityIntent.putExtra("number", "1" );
+för att secondActivity ska kunna ta emot datan som kickas så behövs denna kod. Bundle extras = getIntent().getExtras();
+sedan så skapade jag en textveiw i second Activity och gav den ett nytt id. Det sista som gjorde var att datan som skickas ska visas upp i den textveiw och detta görs med den här koden.
+enetta.setText(getIntent().getStringExtra("number"));
 ## Följande grundsyn gäller dugga-svar:
 
 - Ett kortfattat svar är att föredra. Svar som är längre än en sida text (skärmdumpar och programkod exkluderat) är onödigt långt.
